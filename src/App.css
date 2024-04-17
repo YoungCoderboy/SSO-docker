@@ -6,7 +6,12 @@
   height: 40vmin;
   pointer-events: none;
 }
-
+.btn {
+  background-color: aquamarine;
+  font-size: xx-large;
+  padding: 1rem;
+  border-radius: 1.5rem;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -14,14 +19,14 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: black;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: light greenyellow;
 }
 
 .App-link {
@@ -33,6 +38,40 @@
     transform: rotate(0deg);
   }
   to {
+    transform: rotate(360deg);
+  }
+}
+
+h2 {
+  color: white;
+}
+
+.loading-container {
+  position: fixed; /* Keep it on top of everything */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh; /* Cover the entire viewport */
+  background-color: #000000; /* Semi-transparent background */
+  display: flex; /* Center the loader horizontally */
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  border: 16px solid #dfd9d9; /* Customize border thickness and color */
+  border-radius: 50%;
+  border-top: 16px solid #3498db; /* Animated color */
+  width: 100px;
+  height: 100px;
+  animation: spin 1s linear infinite; /* Animation details */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
     transform: rotate(360deg);
   }
 }
